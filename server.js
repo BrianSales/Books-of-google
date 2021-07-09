@@ -1,4 +1,5 @@
 const express = require("express")
+const path = require ("path")
 
 const app = express()
 
@@ -16,10 +17,10 @@ app.delete("api/books/:id", (req, res, next)=>{
 })
 
 app.get("*", (req, res, next)=>{
-    res.sendFile("client/build/index.html")
+    res.sendFile(path.join(__dirname,"build/index.html"))
 })
 
-app.listen(process.env.PORT || 3000, ()=>{
+app.listen(process.env.PORT || 3001, ()=>{
     console.log("Server listening")
 })
 
