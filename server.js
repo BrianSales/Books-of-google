@@ -14,7 +14,8 @@ app.get("/api/books", (req, res, next)=>{
 })
 
 app.post("/api/books", (req, res, next)=>{
-
+    let book = req.body;
+    
 
 })
 
